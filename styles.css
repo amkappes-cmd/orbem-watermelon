@@ -557,6 +557,14 @@ p  { margin: 0; }
 .value-extra .item p { color: var(--snow-70); font-size: 0.95rem; }
 .value-extra .mk { color: var(--honey); font-family: var(--font-mono); flex: none; }
 
+/* Business-case section: deep indigo so it separates from the dark section above */
+#value { background: #13132e; }
+#value .vstat,
+#value .value-chart {
+  background: #1c1d42;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 /* ---------- Split / feature rows ---------- */
 .split {
   display: grid;
