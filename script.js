@@ -75,22 +75,20 @@
     });
   });
 
-  /* ---- Video: reveal fallback if it can't play ---- */
+  /* ---- Video: only fall back on a genuine playback error ---- */
   var v = document.getElementById('demoVideo');
   var fb = document.getElementById('videoFallback');
   if (v && fb) {
     var showFallback = function () { fb.style.display = 'flex'; };
+    // The <video> fires 'error' only if every source fails; the <source> fires its own.
     v.addEventListener('error', showFallback);
-    // If no source ends up playable, the last <source> fires error on the element
+    var src = v.querySelector('source');
+    if (src) { src.addEventListener('error', showFallback); }
+    // Nudge autoplay once there's enough data (some browsers need the explicit call).
     v.addEventListener('loadeddata', function () {
-      // playable — make sure autoplay actually starts (some browsers need a nudge)
       var p = v.play();
       if (p && p.catch) { p.catch(function () {}); }
     });
-    // Guard: if after a moment there is no video data, offer the fallback link
-    setTimeout(function () {
-      if (v.readyState < 2) showFallback();
-    }, 4000);
   }
 
   /* ---- Smooth-scroll offset for fixed nav on hash links ---- */
