@@ -263,12 +263,13 @@ p  { margin: 0; }
 .hero__accent { color: #fff; font-weight: 700; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .cta-note {
-  margin-top: 13px;
+  margin-top: 20px;
   color: var(--snow-45);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   line-height: 1.5;
   letter-spacing: 0.03em;
+  max-width: 52ch;
 }
 .hero__metrics {
   display: flex;
