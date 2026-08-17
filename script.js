@@ -50,9 +50,11 @@
   }
 
   /* ---- FAQ accordion ---- */
-  document.querySelectorAll('.faq-item').forEach(function (item) {
+  document.querySelectorAll('.faq-item').forEach(function (item, index) {
     var btn = item.querySelector('.faq-q');
     var ans = item.querySelector('.faq-a');
+    if (!ans.id) ans.id = 'faq-answer-' + (index + 1);
+    btn.setAttribute('aria-controls', ans.id);
     btn.addEventListener('click', function () {
       var open = item.classList.contains('open');
       // close siblings for a clean single-open accordion
@@ -86,6 +88,10 @@
     if (src) { src.addEventListener('error', showFallback); }
     // Nudge autoplay once there's enough data (some browsers need the explicit call).
     v.addEventListener('loadeddata', function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        v.pause();
+        return;
+      }
       var p = v.play();
       if (p && p.catch) { p.catch(function () {}); }
     });

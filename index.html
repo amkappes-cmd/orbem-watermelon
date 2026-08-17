@@ -16,10 +16,12 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
@@ -35,28 +37,28 @@
         <a href="#proof">Proof</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-ghost" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-ghost" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener" data-cta="nav">Model my line</a>
     </div>
   </header>
 
   <!-- ===================== HERO ===================== -->
   <main id="top">
-  <section class="hero">
+  <section class="hero" id="main-content" tabindex="-1">
     <div class="wrap hero__grid">
       <div class="hero__copy">
-        <p class="kicker on-dark">Genus Echo · Industrial MRI for fresh produce</p>
-        <h1>See inside every watermelon before it ships.</h1>
+        <p class="kicker on-dark">For U.S. watermelon producers</p>
+        <h1>Know what’s inside every watermelon before it ships.</h1>
         <p class="hero__sub">
-          The first industrial-scale MRI scanner that grades <span class="hero__accent">every</span> watermelon
-          for internal quality — non-destructively, at line speed. Catch hollow heart, cracking,
-          and maturity issues that visual grading cannot detect.
+          Genus Echo brings non-destructive MRI to the packing line. Detect internal defects,
+          grade consistently, and build a quality record for <span class="hero__accent">every fruit</span>—at industrial speed.
         </p>
         <div class="hero__cta">
-          <a class="btn btn-primary btn-lg" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener">
-            Book a 25-minute call <span class="arrow">↗</span>
+          <a class="btn btn-primary btn-lg" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener" data-cta="hero-primary">
+            Model my line <span class="arrow">↗</span>
           </a>
           <a class="btn btn-ghost btn-lg" href="#demo">Watch the 13-second demo</a>
         </div>
+        <p class="cta-note">25 minutes · Built around your throughput, varieties, and buyer requirements</p>
         <div class="pipeline-ribbon">
           <b>Object</b> <span class="sep">→</span> <b>Scan</b> <span class="sep">→</span> <b>Data</b>
           <span>· per-fruit, in milliseconds</span>
@@ -79,7 +81,7 @@
 
       <div class="hero__visual reveal">
         <div class="hero__visual-frame">
-          <img src="hero-compare.jpg" alt="A watermelon cross-section beside its MRI scan, revealing internal structure and seed cavities invisible from the outside." />
+          <img src="hero-compare.jpg" alt="A watermelon cross-section beside its MRI scan, revealing internal structure and seed cavities invisible from the outside." fetchpriority="high" decoding="async" />
           <div class="hero__tags">
             <span class="tag-chip">Visible flesh</span>
             <span class="tag-chip scan">MRI · internal quality</span>
@@ -92,7 +94,7 @@
   <!-- ===================== TRUST BAR ===================== -->
   <section class="trustbar">
     <div class="wrap">
-      <div class="ti"><span class="n">200M+</span><span class="l">units scanned in production</span></div>
+      <div class="ti"><span class="n">200M+</span><span class="l">biological units scanned in production</span></div>
       <div class="ti"><span class="n">20+</span><span class="l">scanners live in Europe</span></div>
       <div class="ti"><span class="n">€55.5M</span><span class="l">Series B backed</span></div>
       <div class="ti"><span class="n">44,000 lb/hr</span><span class="l">throughput per unit</span></div>
@@ -169,7 +171,7 @@
           </div>
         </div>
         <div class="split__media reveal d1 bleed">
-          <img src="mri-compare.jpg" alt="Side-by-side: a watermelon's visible flesh next to its MRI scan showing internal seed cavities and structure." />
+          <img src="mri-compare.jpg" alt="Side-by-side: a watermelon's visible flesh next to its MRI scan showing internal seed cavities and structure." loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -189,7 +191,7 @@
       <div class="video-block reveal d1">
         <div class="video-frame">
           <div class="video-badge"><span class="pulse"></span> Live scan · Genus Echo</div>
-          <video id="demoVideo" autoplay muted loop playsinline preload="auto" poster="hero-compare.jpg">
+          <video id="demoVideo" autoplay muted loop playsinline controls preload="metadata" poster="hero-compare.jpg" aria-label="Genus Echo scanning a watermelon on a production line">
             <source src="demo.mp4" type="video/mp4" />
           </video>
           <div class="video-fallback" id="videoFallback">
@@ -332,9 +334,9 @@
     <div class="wrap">
       <div class="cta-band reveal">
         <h2>Curious what the numbers look like for your operation?</h2>
-        <p>Book a 20-minute conversation and we'll walk you through the modeling for your line, your varieties, and your buyers.</p>
+        <p>In 25 minutes, we’ll map the potential fit using your line speed, varieties, defect profile, and buyer requirements.</p>
         <div class="cta-band__actions">
-          <a class="btn btn-primary btn-lg" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener">Book a call <span class="arrow">↗</span></a>
+          <a class="btn btn-primary btn-lg" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener" data-cta="business-case">Model my line <span class="arrow">↗</span></a>
           <a class="btn btn-ghost btn-lg" href="#demo">Watch the demo</a>
         </div>
       </div>
@@ -477,8 +479,8 @@
       </div>
       <div class="faq reveal">
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Does the scanner replace my QC team?<span class="ic" aria-hidden="true"></span></button>
-          <div class="faq-a"><p>No. It replaces the specific tasks machines do better than people — grading consistency, throughput, per-fruit measurement. Your team keeps handling everything the machine can't: field decisions, buyer relationships, exception handling.</p></div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-qc">Does the scanner replace my QC team?<span class="ic" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-qc"><p>No. It replaces the specific tasks machines do better than people — grading consistency, throughput, per-fruit measurement. Your team keeps handling everything the machine can't: field decisions, buyer relationships, exception handling.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Does the scanner damage the fruit?<span class="ic" aria-hidden="true"></span></button>
@@ -531,7 +533,7 @@
           through a pilot at your operation.
         </p>
         <div class="cta-band__actions" style="margin-top:34px">
-          <a class="btn btn-primary btn-lg" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener">Book a 25-minute call <span class="arrow">↗</span></a>
+          <a class="btn btn-primary btn-lg" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener" data-cta="final">Model my line <span class="arrow">↗</span></a>
           <a class="btn btn-ghost btn-lg" href="#demo">Watch the demo</a>
         </div>
       </div>
@@ -571,7 +573,7 @@
   <!-- Sticky mobile/scroll CTA -->
   <div class="sticky-cta" id="stickyCta">
     <span>Talk to our team about a pilot</span>
-    <a class="btn btn-primary" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener">Book a call</a>
+    <a class="btn btn-primary" href="https://calendar.app.google/1pP3A1nvstA7CGHr8" target="_blank" rel="noopener" data-cta="sticky">Model my line</a>
   </div>
 
   <script src="script.js"></script>
